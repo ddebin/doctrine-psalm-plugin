@@ -32,7 +32,8 @@ Feature: Expr
 
   @ExpressionBuilder
   Scenario: ExpressionBuilder::andX() accepts variadic arguments
-    Given I have the following code
+    Given I have the "doctrine/dbal" package satisfying the "< 2.11"
+    And I have the following code
       """
       builder()->expr()->andX(
         'foo > bar',
@@ -44,7 +45,8 @@ Feature: Expr
 
   @ExpressionBuilder
   Scenario: ExpressionBuilder::orX() accepts variadic arguments
-    Given I have the following code
+    Given I have the "doctrine/dbal" package satisfying the "< 2.11"
+    And I have the following code
       """
       $expr = builder()->expr();
       $expr->orX(
